@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== SEO ===== -->
+  <title>Cauã Martins — Desenvolvedor Front-end & UX/UI Designer</title>
+  <meta name="description" content="Cauã Martins é desenvolvedor Front-end e UX/UI Designer especializado em criar interfaces modernas, rápidas e memoráveis para web e mobile.">
+  <meta name="keywords" content="desenvolvedor front-end, ux ui designer, portfólio, react, javascript, web design">
+  <meta name="author" content="Cauã Martins">
+  <meta name="robots" content="index, follow">
+
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cauã Martins — Desenvolvedor Front-end & UX/UI Designer">
+  <meta property="og:description" content="Interfaces modernas, rápidas e memoráveis. Confira projetos, habilidades e experiência.">
+  <meta property="og:image" content="https://i.pravatar.cc/600?img=13">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- ===== Favicon (inline SVG, sem dependência externa) ===== -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233B82F6'/%3E%3Cstop offset='1' stop-color='%237C3AED'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='%230A0A0F'/%3E%3Ctext x='50' y='68' font-size='54' font-family='Arial' font-weight='700' fill='url(%23g)' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
+
+  <!-- ===== Fontes ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- ===== Ícones (Devicon + Font Awesome) ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.15.1/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="ddd.css">
+</head>
+<body>
+
+  <!-- ===================== LOADING SCREEN ===================== -->
+  <div id="loading-screen" aria-hidden="true">
+    <div class="loader-content">
+      <span class="loader-logo">CM</span>
+      <div class="loader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ===================== CURSOR CUSTOMIZADO ===================== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===================== BOTÃO VOLTAR AO TOPO ===================== -->
+  <button id="backToTop" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container">
+      <a href="#home" class="logo">CM<span class="logo-dot">.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-link>Início</a></li>
+        <li><a href="#about" class="nav-link" data-link>Sobre</a></li>
+        <li><a href="#skills" class="nav-link" data-link>Habilidades</a></li>
+        <li><a href="#projects" class="nav-link" data-link>Projetos</a></li>
+        <li><a href="#experience" class="nav-link" data-link>Experiência</a></li>
+        <li><a href="#services" class="nav-link" data-link>Serviços</a></li>
+        <li><a href="#testimonials" class="nav-link" data-link>Depoimentos</a></li>
+        <li><a href="#contact" class="nav-link" data-link>Contato</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button id="menuToggle" class="menu-toggle" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section id="home" class="hero">
+      <canvas id="particles" class="particles-canvas"></canvas>
+      <div class="hero-glow"></div>
+
+      <div class="container hero-content">
+        <p class="eyebrow reveal">Olá, eu sou</p>
+
+        <div class="hero-photo reveal">
+          <img src="nagato.jpg" alt="Foto de perfil de Cauã Martins" width="140" height="140" loading="eager">
+        </div>
+
+        <h1 class="hero-name reveal">Cauã Martins</h1>
+
+        <h2 class="hero-role reveal">
+          <span id="typingText"></span><span class="cursor-blink">|</span>
+        </h2>
+
+        <p class="hero-desc reveal">
+          Crio produtos digitais que unem design refinado e código sólido.
+          Transformo ideias complexas em experiências simples, rápidas e bonitas de usar.
+        </p>
+
+        <div class="hero-buttons reveal">
+          <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+          <a href="#contact" class="btn btn-secondary">Entrar em Contato</a>
+        </div>
+
+        <div class="hero-scroll">
+          <span>Role para explorar</span>
+          <div class="scroll-line"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SOBRE MIM ===================== -->
+    <section id="about" class="section">
+      <div class="container">
+        <p class="section-eyebrow reveal">Sobre mim</p>
+        <h2 class="section-title reveal">Design com propósito, código com precisão</h2>
+
+        <div class="about-grid">
+          <div class="about-text reveal-left">
+            <p>
+              Sou desenvolvedor Front-end e Freelancer com mais de 1 ano de experiência
+              construindo interfaces para startups e empresas de tecnologia. Meu trabalho fica
+              na interseção entre estética e engenharia: acredito que um bom produto precisa
+              parecer simples, mesmo quando resolve problemas complexos.
+            </p>
+
+            <div class="about-stats">
+              <div class="stat">
+                <span class="stat-number" data-target="30">0</span>
+                <span class="stat-plus">+</span>
+                <span class="stat-label">Projetos entregues</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number" data-target="30">0</span>
+                <span class="stat-plus">+</span>
+                <span class="stat-label">Clientes atendidos</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number" data-target="1">0</span>
+                <span class="stat-plus">+</span>
+                <span class="stat-label">Anos de experiência</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-timeline reveal-right">
+            <div class="timeline-item">
+              <span class="timeline-year">2026 — Atual</span>
+              <h3>Freelancer</h3>
+             
+            </div>
+           
+    </section>
+
+    <!-- ===================== HABILIDADES ===================== -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <p class="section-eyebrow reveal">O que eu uso</p>
+        <h2 class="section-title reveal">Habilidades &amp; Ferramentas</h2>
+
+        <div class="skills-grid">
+          <div class="skill-card reveal-up">
+            <i class="devicon-html5-plain colored skill-icon"></i>
+            <h3>HTML</h3>
+            <div class="skill-bar"><span data-level="95"></span></div>
+            <span class="skill-level">95%</span>
+          </div>
+          <div class="skill-card reveal-up">
+            <i class="devicon-css3-plain colored skill-icon"></i>
+            <h3>CSS</h3>
+            <div class="skill-bar"><span data-level="92"></span></div>
+            <span class="skill-level">92%</span>
+          </div>
+          <div class="skill-card reveal-up">
+            <i class="devicon-javascript-plain colored skill-icon"></i>
+            <h3>JavaScript</h3>
+            <div class="skill-bar"><span data-level="90"></span></div>
+            <span class="skill-level">90%</span>
+          </div>
+          <div class="skill-card reveal-up">
+            <i class="devicon-nodejs-plain colored skill-icon"></i>
+            <h3>Node.js</h3>
+            <div class="skill-bar"><span data-level="80"></span></div>
+            <span class="skill-level">80%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+
+    <!-- ===================== EXPERIÊNCIA ===================== -->
+    <section id="experience" class="section section-alt">
+      <div class="container">
+        <p class="section-eyebrow reveal">Trajetória</p>
+        <h2 class="section-title reveal">Experiência Profissional</h2>
+
+        <div class="exp-timeline">
+          <div class="exp-item reveal-left">
+            <div class="exp-dot"></div>
+            <div class="exp-card">
+              <span class="exp-period">2026 — Atual</span>
+              <h3>Freelancer</h3>
+              <p>Liderança técnica do time de front-end, definição de arquitetura de componentes e mentoria de desenvolvedores júnior.</p>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVIÇOS ===================== -->
+    <section id="services" class="section">
+      <div class="container">
+        <p class="section-eyebrow reveal">Como posso ajudar</p>
+        <h2 class="section-title reveal">Serviços</h2>
+
+        <div class="services-grid">
+          <div class="service-card reveal-up">
+            <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Desenvolvimento Front-end</h3>
+            <p>Interfaces rápidas, acessíveis e responsivas construídas com código limpo e escalável.</p>
+          </div>
+          <div class="service-card reveal-up">
+            <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+            <h3>UI/UX Design</h3>
+            <p>Pesquisa, wireframes e protótipos de alta fidelidade focados em experiência do usuário.</p>
+          </div>
+          <div class="service-card reveal-up">
+            <div class="service-icon"><i class="fa-solid fa-swatchbook"></i></div>
+            <h3>Design Systems</h3>
+            <p>Bibliotecas de componentes consistentes que aceleram o time de produto.</p>
+          </div>
+          <div class="service-card reveal-up">
+            <div class="service-icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <h3>Performance & SEO</h3>
+            <p>Otimização de velocidade, acessibilidade e visibilidade em buscadores.</p>
+          </div>
+          <div class="service-card reveal-up">
+            <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <h3>Aplicações Web</h3>
+            <p>Produtos web completos, do design ao deploy, prontos para escalar.</p>
+          </div>
+          <div class="service-card reveal-up">
+            <div class="service-icon"><i class="fa-solid fa-people-arrows"></i></div>
+            <h3>Consultoria</h3>
+            <p>Avaliação técnica e de design para times que querem elevar seu produto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DEPOIMENTOS ===================== -->
+    <section id="testimonials" class="section section-alt">
+      <div class="container">
+        <p class="section-eyebrow reveal">O que dizem sobre mim</p>
+        <h2 class="section-title reveal">Depoimentos</h2>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal-up">
+            <div class="testimonial-stars">★★★★★</div>
+            <p>"Rafael entendeu exatamente o que precisávamos e entregou um produto além das expectativas. Comunicação impecável do início ao fim."</p>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/80?img=32" alt="Foto de Camila Andrade" loading="lazy" width="48" height="48">
+              <div>
+                <strong>Camila Andrade</strong>
+                <span>CEO, Nova Finance</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal-up">
+            <div class="testimonial-stars">★★★★★</div>
+            <p>"Um dos profissionais mais atentos a detalhes que já trabalhei. O design ficou muito acima do que imaginávamos."</p>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/80?img=51" alt="Foto de Bruno Lima" loading="lazy" width="48" height="48">
+              <div>
+                <strong>Bruno Lima</strong>
+                <span>Head de Produto, Fitly</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal-up">
+            <div class="testimonial-stars">★★★★★</div>
+            <p>"Entrega rápida, código organizado e um olhar de designer que fez toda a diferença no resultado final."</p>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/80?img=47" alt="Foto de Marina Costa" loading="lazy" width="48" height="48">
+              <div>
+                <strong>Marina Costa</strong>
+                <span>Fundadora, Loja Studio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTATO ===================== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <p class="section-eyebrow reveal">Vamos conversar</p>
+        <h2 class="section-title reveal">Contato</h2>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal-left">
+            <p>
+              Tem um projeto em mente ou quer bater um papo sobre uma oportunidade?
+              Minha caixa de entrada está sempre aberta.
+            </p>
+
+            <a href="mailto:cauazin462@gmail.com" class="contact-email">cauazin462@gmail.com</a>
+
+            <div class="social-links">
+              <a href="https://github.com/cauazin462" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://discord.gg/JXs6mqssXy" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+              <a href="mailto:cauazin462@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <form class="contact-form reveal-right" id="contactForm">
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Mensagem</label>
+              <textarea id="message" name="message" rows="5" placeholder="Conte um pouco sobre seu projeto..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              <span>Enviar Mensagem</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <p class="form-status" id="formStatus" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo">RD<span class="logo-dot">.</span></a>
+        <p>Desenvolvedor Front-end &amp; UX/UI Designer construindo experiências digitais memoráveis.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navegação</h4>
+        <a href="#about">Sobre</a>
+        <a href="#projects">Projetos</a>
+        <a href="#experience">Experiência</a>
+        <a href="#contact">Contato</a>
+      </div>
+
+      <div class="footer-social">
+        <h4>Redes</h4>
+        <div class="social-links">
+          <a href="https://github.com/cauazin462" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://discord.gg/JXs6mqssXy" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Cauã Martins. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="dd1.js"></script>
+</body>
+</html>
